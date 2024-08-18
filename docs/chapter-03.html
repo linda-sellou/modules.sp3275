@@ -359,8 +359,8 @@ For Deeper Discussion
 <section id="plotting-daisy-coverage-against-time" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="plotting-daisy-coverage-against-time"><span class="header-section-number">3.2.1</span> PLOTTING DAISY COVERAGE AGAINST TIME</h3>
 <p>Let us begin by first looking at how the daisy’s area changes with time. As we do not have a simple equation linking both variables, we will use the Euler’s method to determine a function of how the daisy’s area changes with time.</p>
-<section id="eulers-method" class="level6 unnumbered">
-<h6 class="unnumbered anchored" data-anchor-id="eulers-method">Euler’s Method</h6>
+<section id="eulers-method" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="eulers-method">Euler’s Method</h4>
 <div id="def-x" class="theorem definition">
 <p><span class="theorem-title"><strong>Quick Check 3.2 </strong></span>Do you remember <a href="https://sps.nus.edu.sg/sp2273/docs/knowledge_lake/numerical/2_numerical_good.html#what-do-we-mean-by-changes"><strong><em>Numerical Solutions</em></strong></a>?</p>
 </div>
@@ -387,29 +387,25 @@ For Deeper Discussion
 <li><p style="text-align: justify;">
 </p><p>Given the initial value of the daisies (<span class="math inline">\(A_{w0}=0.01\)</span>) can you calculate the value of the daisies after one timestep (<span class="math inline">\(A_{w1}\)</span>)?</p></li>
 </ol>
-</section></section></section></main></div>
-<div>
 <p><strong>Let’s code</strong></p>
 <ol type="a">
 <li><p>Create a loop that can help you generate the data (<span class="math inline">\(A_{w1}, A_{w2}, A_{w_3}, ...\)</span>) for a specific number of timesteps, <span class="math inline">\(\Delta t\)</span> (you may start with 50 iterations).</p></li>
 <li><p>Plot the graph of daisy coverage (<span class="math inline">\(A_w\)</span>) against time (<span class="math inline">\(t\)</span>) for white daisies.</p></li>
 <li><p>Repeat (<strong>a</strong>) and (<strong>b</strong>) for black daisies.</p></li>
 </ol>
-</div>
 <p><strong>Hint</strong>: You may find that referring to the white daisy feedback loop may help with understanding how to update the variables.</p>
 <div id="def-x" class="theorem definition">
 <p><span class="theorem-title"><strong>Quick Check 3.3 </strong></span>Do you remember <a href="https://sps.nus.edu.sg/sp2273/docs/python_basics/04_loops/1_loops_need.html"><strong><em>Loops</em></strong></a>?</p>
 </div>
-
-
-
+</section>
+</section>
+</section>
 <section id="how-does-the-planet-temperature-change-with-time" class="level2" data-number="3.3">
-<h2 data-number="3.3" data-anchor-id="how-does-the-planet-temperature-change-with-time"><span class="header-section-number">3.3</span> HOW DOES THE PLANET TEMPERATURE CHANGE WITH TIME?</h2>
+<h2 data-number="3.3" class="anchored" data-anchor-id="how-does-the-planet-temperature-change-with-time"><span class="header-section-number">3.3</span> HOW DOES THE PLANET TEMPERATURE CHANGE WITH TIME?</h2>
 <p>Now, we are interested in planet temperature. However, similar to daisy coverage, we do not have a direct simple equation that links the planet temperature with time. Identify the main equation in the paper that shows the change in temperature.</p>
 <p>Looking at the equation, what variable(s) are changing with time ?</p>
 <p><strong>Let’s code</strong></p>
 <p>By making small changes to the code in Exercise 4, plot the planet temperature against time.</p>
-
 <style>
 td, th {
    border: none!important;
@@ -417,7 +413,7 @@ td, th {
 }
 </style>
 <section id="modelling-questions" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" data-anchor-id="modelling-questions"><span class="header-section-number">3.3.1</span> Modelling Questions</h3>
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="modelling-questions"><span class="header-section-number">3.3.1</span> Modelling Questions</h3>
 <table class="table">
 <colgroup>
 <col style="width: 23%">
@@ -441,7 +437,7 @@ td, th {
 </section>
 </section>
 <section id="how-does-the-planet-temperature-change-with-the-presence-of-both-black-and-white-daisies" class="level2" data-number="3.4">
-<h2 data-number="3.4" data-anchor-id="how-does-the-planet-temperature-change-with-the-presence-of-both-black-and-white-daisies"><span class="header-section-number">3.4</span> HOW DOES THE PLANET TEMPERATURE CHANGE WITH THE PRESENCE OF BOTH BLACK AND WHITE DAISIES?</h2>
+<h2 data-number="3.4" class="anchored" data-anchor-id="how-does-the-planet-temperature-change-with-the-presence-of-both-black-and-white-daisies"><span class="header-section-number">3.4</span> HOW DOES THE PLANET TEMPERATURE CHANGE WITH THE PRESENCE OF BOTH BLACK AND WHITE DAISIES?</h2>
 <p>We have completed the first steps of building our model ! Let us move on to observe the interactions of black and white daisies on a planet. We are now looking at a planet with white and black daisies growing together. Adapt your equations to take into account both daisies at the same time.</p>
 <p><strong>Let’s code</strong></p>
 <p>Plot the daisy coverage of black (<span class="math inline">\(A_b\)</span>) and white daisies (<span class="math inline">\(A_w\)</span>) against time (<span class="math inline">\(t\)</span>) on the same graph. On another graph, plot the planet temperature (<span class="math inline">\(T_p\)</span>) against (<span class="math inline">\(t\)</span>).</p>
@@ -462,7 +458,7 @@ For Deeper Discussion
 </div>
 </div>
 <section id="modelling-questions-1" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" data-anchor-id="modelling-questions-1"><span class="header-section-number">3.4.1</span> Modelling Questions</h3>
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="modelling-questions-1"><span class="header-section-number">3.4.1</span> Modelling Questions</h3>
 <table class="table">
 <colgroup>
 <col style="width: 23%">
@@ -490,7 +486,7 @@ For Deeper Discussion
 </section>
 </section>
 <section id="how-does-planet-temperature-and-daisy-coverage-change-with-luminosity" class="level2" data-number="3.5">
-<h2 data-number="3.5" data-anchor-id="how-does-planet-temperature-and-daisy-coverage-change-with-luminosity"><span class="header-section-number">3.5</span> HOW DOES PLANET TEMPERATURE AND DAISY COVERAGE CHANGE WITH LUMINOSITY?</h2>
+<h2 data-number="3.5" class="anchored" data-anchor-id="how-does-planet-temperature-and-daisy-coverage-change-with-luminosity"><span class="header-section-number">3.5</span> HOW DOES PLANET TEMPERATURE AND DAISY COVERAGE CHANGE WITH LUMINOSITY?</h2>
 <p>Let’s complete your code so that you can directly plot the steady state values <span class="math inline">\(A_w\)</span>, <span class="math inline">\(A_b\)</span>, and <span class="math inline">\(T_p\)</span> (in <span class="math inline">\(\degree C\)</span>) for increasing luminosity (<span class="math inline">\(L\)</span>).</p>
 <p><strong>Let’s code</strong></p>
 <ol type="a">
@@ -514,7 +510,7 @@ Take note
 </div>
 </section>
 <section id="modelling-questions-2" class="level2" data-number="3.6">
-<h2 data-number="3.6" data-anchor-id="modelling-questions-2"><span class="header-section-number">3.6</span> Modelling Questions</h2>
+<h2 data-number="3.6" class="anchored" data-anchor-id="modelling-questions-2"><span class="header-section-number">3.6</span> Modelling Questions</h2>
 <table class="table">
 <colgroup>
 <col style="width: 23%">
@@ -549,14 +545,14 @@ Take note
 </table>
 </section>
 <section id="alternative-method-to-visualise-steady-states---the-state-space-picture" class="level2" data-number="3.7">
-<h2 data-number="3.7" data-anchor-id="alternative-method-to-visualise-steady-states---the-state-space-picture"><span class="header-section-number">3.7</span> ALTERNATIVE METHOD TO VISUALISE STEADY STATES - THE STATE SPACE PICTURE</h2>
+<h2 data-number="3.7" class="anchored" data-anchor-id="alternative-method-to-visualise-steady-states---the-state-space-picture"><span class="header-section-number">3.7</span> ALTERNATIVE METHOD TO VISUALISE STEADY STATES - THE STATE SPACE PICTURE</h2>
 <p>::: {style=“text-align: justify;”} In this section, instead of looking how the area varies with time, we are looking at how varies with area. Run the Python code [Daisyworld State Space Picture.ipynb] written by Park Kun Hee (SPS Batch 2015) available in the same Daisyworld Google Classroom post.</p>
 <section id="steady-state-solutions-and-stability" class="level3" data-number="3.7.1">
-<h3 data-number="3.7.1" data-anchor-id="steady-state-solutions-and-stability"><span class="header-section-number">3.7.1</span> STEADY STATE SOLUTIONS AND STABILITY</h3>
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="steady-state-solutions-and-stability"><span class="header-section-number">3.7.1</span> STEADY STATE SOLUTIONS AND STABILITY</h3>
 <p>We first look at how we can find steady state solutions and their stabilities with this new picture.</p>
 </section>
 <section id="modelling-questions-3" class="level3" data-number="3.7.2">
-<h3 data-number="3.7.2" data-anchor-id="modelling-questions-3"><span class="header-section-number">3.7.2</span> Modelling Questions</h3>
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="modelling-questions-3"><span class="header-section-number">3.7.2</span> Modelling Questions</h3>
 <table class="table">
 <colgroup>
 <col style="width: 23%">
@@ -583,7 +579,7 @@ Take note
 </table>
 </section>
 <section id="dimensional-generalisation" class="level3" data-number="3.7.3">
-<h3 data-number="3.7.3" data-anchor-id="dimensional-generalisation"><span class="header-section-number">3.7.3</span> 2-DIMENSIONAL GENERALISATION</h3>
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="dimensional-generalisation"><span class="header-section-number">3.7.3</span> 2-DIMENSIONAL GENERALISATION</h3>
 <p>For the two-daisy case, the state of the system is totally characterised by two variables, <span class="math display">\[ A_b \in [0,1] \ and \ A_w \in [0,1], \ constrained \ by \ A_b + A_w \le 1\]</span></p>
 <p>Therefore, the state space, where all possible states reside, is a region in two-dimensional space bounded by a triangle, whose vertices are at (0,0), (0,1) and (1,0).</p>
 <p>Just like the one-daisy case, a state of the system is represented by a point in the triangular region, and its time evolution is represented by a continuous slide across the region. However, unlike the one-daisy case, there are now two different rates of change of area that direct how to evolve the system, namely,</p>
@@ -594,7 +590,7 @@ Take note
 <p>We may therefore define a vector <span class="math inline">\(v\)</span> that consists of two components: magnitude of in the <span class="math inline">\(A_b\)</span>-direction, and magnitude of in the <span class="math inline">\(A_w\)</span>-direction.</p>
 </section>
 <section id="modelling-questions-4" class="level3" data-number="3.7.4">
-<h3 data-number="3.7.4" data-anchor-id="modelling-questions-4"><span class="header-section-number">3.7.4</span> Modelling Questions</h3>
+<h3 data-number="3.7.4" class="anchored" data-anchor-id="modelling-questions-4"><span class="header-section-number">3.7.4</span> Modelling Questions</h3>
 <table class="table">
 <colgroup>
 <col style="width: 25%">
@@ -633,11 +629,11 @@ Take note
 </table>
 </section>
 <section id="bifurcation" class="level3" data-number="3.7.5">
-<h3 data-number="3.7.5" data-anchor-id="bifurcation"><span class="header-section-number">3.7.5</span> BIFURCATION</h3>
+<h3 data-number="3.7.5" class="anchored" data-anchor-id="bifurcation"><span class="header-section-number">3.7.5</span> BIFURCATION</h3>
 <p>The bifurcation plot shows how steady states change with respect to a parameter. In this example, we will choose the parameter to be luminosity <span class="math inline">\(L\)</span>, you may try other parameters as well.</p>
 </section>
 <section id="modelling-questions-5" class="level3" data-number="3.7.6">
-<h3 data-number="3.7.6" data-anchor-id="modelling-questions-5"><span class="header-section-number">3.7.6</span> Modelling Questions</h3>
+<h3 data-number="3.7.6" class="anchored" data-anchor-id="modelling-questions-5"><span class="header-section-number">3.7.6</span> Modelling Questions</h3>
 <table class="table">
 <colgroup>
 <col style="width: 25%">
@@ -653,7 +649,7 @@ Take note
 </section>
 </section>
 <section id="deliverables" class="level2" data-number="3.8">
-<h2 data-number="3.8" data-anchor-id="deliverables"><span class="header-section-number">3.8</span> DELIVERABLES</h2>
+<h2 data-number="3.8" class="anchored" data-anchor-id="deliverables"><span class="header-section-number">3.8</span> DELIVERABLES</h2>
 <ol type="1">
 <li>Earth journal entry</li>
 <li>Group presentation</li>
@@ -661,7 +657,7 @@ Take note
 <p>Instructions given in separate documents.</p>
 </section>
 <section id="references" class="level2" data-number="3.9">
-<h2 data-number="3.9" data-anchor-id="references"><span class="header-section-number">3.9</span> REFERENCES</h2>
+<h2 data-number="3.9" class="anchored" data-anchor-id="references"><span class="header-section-number">3.9</span> REFERENCES</h2>
 <div style="text-align: justify;">
 <p>[1] Conserve and sustainably use the oceans, seas and marine resources for sustainable development [Internet]. United Nations, 2022. Available from: <a href="https://sdgs.un.org/goals/goal14" class="uri">https://sdgs.un.org/goals/goal14</a></p>
 <p>[2] Kump LR, Kasting JF, and Crane RG. The earth system. Upper Saddle River, NJ: Pearson Prentice Hall, 2011.</p>
@@ -669,9 +665,9 @@ Take note
 </div>
 </section>
 <section id="appendix" class="level2" data-number="3.10">
-<h2 data-number="3.10" data-anchor-id="appendix"><span class="header-section-number">3.10</span> APPENDIX</h2>
+<h2 data-number="3.10" class="anchored" data-anchor-id="appendix"><span class="header-section-number">3.10</span> APPENDIX</h2>
 <section id="constants" class="level4" data-number="3.10.0.1">
-<h4 data-number="3.10.0.1" data-anchor-id="constants"><span class="header-section-number">3.10.0.1</span> Constants</h4>
+<h4 data-number="3.10.0.1" class="anchored" data-anchor-id="constants"><span class="header-section-number">3.10.0.1</span> Constants</h4>
 <table class="table">
 <colgroup>
 <col style="width: 27%">
@@ -719,7 +715,7 @@ Take note
 </section>
 </section>
 <section id="equations" class="level2" data-number="3.11">
-<h2 data-number="3.11" data-anchor-id="equations"><span class="header-section-number">3.11</span> Equations</h2>
+<h2 data-number="3.11" class="anchored" data-anchor-id="equations"><span class="header-section-number">3.11</span> Equations</h2>
 <table class="table">
 <colgroup>
 <col style="width: 29%">
@@ -763,7 +759,7 @@ Take note
 
 </section>
 
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1006,7 +1002,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-next">
   </div>
 </nav>
- <!-- /content -->
+</div> <!-- /content -->
 
 
 
