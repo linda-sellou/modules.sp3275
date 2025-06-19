@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -225,11 +259,21 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="unnumbered anchored" data-anchor-id="overview">OVERVIEW</h2>
 <section id="learning-objectives" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="learning-objectives">LEARNING OBJECTIVES</h3>
+<p><strong>1. Understand the Role of Climate in Earth’s Sustainability</strong></p>
 <ul>
-<li>Understand the role of the climate in Earth’s sustainability.</li>
-<li>Understand what the climate depends on.</li>
-<li>Understand what affects the climate and how it evolves.</li>
-<li>Discuss how the simplest models can be used to understand climate dynamics.</li>
+<li>Explain the significance of climate in maintaining Earth’s habitability and supporting life.</li>
+</ul>
+<p><strong>2. Identify Key Determinants of Climate</strong></p>
+<ul>
+<li>Describe the primary factors that influence Earth’s climate, such as solar radiation, atmospheric composition, and surface properties.</li>
+</ul>
+<p><strong>3. Analyze Influences on Climate Evolution</strong></p>
+<ul>
+<li>Examine the processes and variables that drive changes in climate over time, including natural and anthropogenic factors.</li>
+</ul>
+<p><strong>4. Appreciate the Utility of Simple Climate Models</strong></p>
+<ul>
+<li>Discuss how simple models can be used to gain insights into climate dynamics.</li>
 </ul>
 </section>
 <section id="preamble" class="level3 unnumbered">
@@ -331,7 +375,7 @@ For Deeper Discussion
 \tag{2}
 F = \sigma T^{4}
 \end{equation}\]</span>
-<p>The flux (<span class="math inline">\(F\)</span>, <span class="math inline">\(W m^{-2}\)</span>) emitted is the product of the temperature (<span class="math inline">\(T\)</span>, <span class="math inline">\(K\)</span>) of the blackbody and the Stefan-Boltzmann constant (<span class="math inline">\(\sigma = 5.67 * 10^{-8} W m^{-2} K^{-4}\)</span>).</p>
+<p>The flux (<span class="math inline">\(F\)</span>, <span class="math inline">\(W m^{-2}\)</span>) emitted is the product of the temperature (<span class="math inline">\(T\)</span>, <span class="math inline">\(K\)</span>) of the blackbody and the Stefan-Boltzmann constant (<span class="math inline">\(\sigma = 5.67 \times 10^{-8} W m^{-2} K^{-4}\)</span>).</p>
 </section>
 <section id="calculation-of-flux-received-at-the-surface-of-a-planet" class="level4" data-number="2.3.2.4">
 <h4 data-number="2.3.2.4" class="anchored" data-anchor-id="calculation-of-flux-received-at-the-surface-of-a-planet"><span class="header-section-number">2.3.2.4</span> Calculation of flux received at the surface of a planet</h4>
@@ -387,7 +431,7 @@ T_{p} = \sqrt[4]{\frac{S_0(1-\alpha)}{4\sigma}}
 </section>
 <section id="modelling-questions" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="modelling-questions"><span class="header-section-number">2.4</span> Modelling Questions</h2>
-<p><strong>M1.</strong> Write code to calculate the flux received on a planet (<span class="math inline">\(S_0\)</span>) given the following parameters: <br> <strong>1.</strong> Temperature of the star (Sun), <span class="math inline">\(T_s\)</span> = <span class="math inline">\(5780\)</span> K <br> <strong>2.</strong> Radius of the star (Sun), <span class="math inline">\(r_s\)</span> = <span class="math inline">\(6.96 * 10^8 m\)</span> <br> <strong>3.</strong> Distance of the planet (Earth) from the star (Sun), <span class="math inline">\(R_p\)</span> = 1 AU <br><br> <strong>Hint:</strong> Use Stefan-Boltzmann Law (2) and the Inverse square law (3).</p>
+<p><strong>M1.</strong> Write code to calculate the flux received on a planet (<span class="math inline">\(S_0\)</span>) given the following parameters: <br> <strong>1.</strong> Temperature of the star (Sun), <span class="math inline">\(T_s\)</span> = <span class="math inline">\(5780\)</span> K <br> <strong>2.</strong> Radius of the star (Sun), <span class="math inline">\(r_s\)</span> = <span class="math inline">\(6.96 \times 10^8 m\)</span> <br> <strong>3.</strong> Distance of the planet (Earth) from the star (Sun), <span class="math inline">\(R_p\)</span> = 1 AU <br><br> <strong>Hint:</strong> Use Stefan-Boltzmann Law (2) and the Inverse square law (3).</p>
 <hr>
 <p><strong>M2.</strong> Using <span class="math inline">\(S_0\)</span> from <strong>M1</strong>, calculate the effective temperature of the planet (Earth) at radiative equilibrium given an albedo (<span class="math inline">\(\alpha\)</span>) of 0.3.</p>
 <hr>
@@ -423,14 +467,14 @@ T_{p} = \sqrt[4]{\frac{S_0(1-\alpha)}{4\sigma}}
 <figcaption class="figure-caption"><strong>Figure 9:</strong> <strong>Left</strong>, One-layer model: <span class="math inline">\(F_s\)</span>, <span class="math inline">\(F_g\)</span> and <span class="math inline">\(F_a\)</span> are respectively the emission from the sun, the Earth’s surface and the atmosphere (with <span class="math inline">\(\tau_s\)</span> = 0.8 and <span class="math inline">\(\tau_g\)</span> = 0.1). <strong>Right</strong>, The blackbody emission spectrum of the sun and measured solar radiation before and after going through the atmosphere.</figcaption>
 </figure>
 </div>
-<div id="exr-hahah" class="theorem exercise">
-<p><span class="theorem-title"><strong>Question 2.2 </strong></span>What does <span class="math inline">\(\tau_s\)</span> and <span class="math inline">\(\tau_g\)</span> represent? Explain the difference in value.</p>
+<div>
+<p>What does <span class="math inline">\(\tau_s\)</span> and <span class="math inline">\(\tau_g\)</span> represent? Explain the difference in value.</p>
 </div>
-<div id="exr-hahah" class="theorem exercise">
-<p><span class="theorem-title"><strong>Question 2.3 </strong></span>Assume there is a radiative equilibrium both at the top of the atmosphere and at the surface of the Earth (bottom of the atmosphere), derive an expression for the flux emitted from the ground (<span class="math inline">\(F_g\)</span>) as a function of <span class="math inline">\(F_s\)</span>, <span class="math inline">\(\tau_s\)</span>, <span class="math inline">\(\tau_g\)</span> (see <strong>Figure 9</strong>)</p>
+<div>
+<p>Assume there is a radiative equilibrium both at the top of the atmosphere and at the surface of the Earth (bottom of the atmosphere), derive an expression for the flux emitted from the ground (<span class="math inline">\(F_g\)</span>) as a function of <span class="math inline">\(F_s\)</span>, <span class="math inline">\(\tau_s\)</span>, <span class="math inline">\(\tau_g\)</span> (see <strong>Figure 9</strong>)</p>
 </div>
-<div id="exr-hahah" class="theorem exercise">
-<p><span class="theorem-title"><strong>Question 2.4 </strong></span>From the previous simplified equation, derive the equation to calculate the effective temperature of the planet (<span class="math inline">\(T_p\)</span>) with an atmosphere.</p>
+<div>
+<p>From the previous simplified equation, derive the equation to calculate the effective temperature of the planet (<span class="math inline">\(T_p\)</span>) with an atmosphere.</p>
 </div>
 </section>
 </section>
@@ -444,7 +488,7 @@ T_{p} = \sqrt[4]{\frac{S_0(1-\alpha)}{4\sigma}}
 <h3 data-number="2.7.1" class="anchored" data-anchor-id="earth-as-a-greybody"><span class="header-section-number">2.7.1</span> EARTH AS A GREYBODY</h3>
 <p>So far, we have modelled the planet as a perfect blackbody and therefore the emitted flux Fg (<span class="math inline">\(W m^{-2}\)</span>):</p>
 <span class="math display">\[\begin{equation}
-F_{g} = \epsilon\sigma * T^4 = \sigma * T^4
+F_{g} = \epsilon\sigma \times  T^4 = \sigma \times T^4
 \end{equation}\]</span>
 <p><span class="math inline">\(\epsilon\)</span> is the emissivity of the body. It varies from 0 (no emission) to 1 (perfect blackbody emission). A body with an emissivity less than 1 is called a greybody.</p>
 <p>From the one-layer model, we see that the atmosphere affects a planet’s surface temperature greatly through the introduction of <span class="math inline">\(\tau\)</span>. Comparing it to the simple radiative equilibrium model which assumes the Earth as a perfect blackbody (<span class="math inline">\(\epsilon\)</span> = 1), we can find that it does not model well the real surface temperature.</p>
@@ -454,12 +498,13 @@ F_{g} = \epsilon\sigma * T^4 = \sigma * T^4
 <h3 data-number="2.7.2" class="anchored" data-anchor-id="temperature-linearisation"><span class="header-section-number">2.7.2</span> TEMPERATURE LINEARISATION</h3>
 <p>In order to make the modelling easier, we’ll be doing temperature linearisation (possible because <span class="math inline">\(T_c\)</span> = <span class="math inline">\(\pm\)</span> 20<span class="math inline">\(^\circ\)</span>C). Sellers (1969) and Budyko (1969) in the 60’s demonstrated that Earth’s energy emission could be written in a linear form with the temperature. Much later, it was proven to fit very well with energy flux observations.</p>
 <p>Since for small <span class="math inline">\(x\)</span>, we can write <span class="math inline">\((1+x)^4 \approx 1 + 4x\)</span></p>
-<p><span class="math display">\[T_K^4 = (T_0 + T_c)^4 = T_0^4 * (1 + \frac{T_c}{T_0})^4 \approx T_0^4 * (1+4\frac{T_c}{T_0})\]</span> The temperature in Kelvin (<span class="math inline">\(T_K\)</span>), the 0<span class="math inline">\(^\circ\)</span>C in Kelvin (<span class="math inline">\(T_0\)</span> = 273.15K) and temperature in Celcius (<span class="math inline">\(T_c\)</span>)</p>
-<p><span class="math display">\[{T_K}^4 = {T_0}^4 + 4{T_0}^3 * T_c = a + bT_c\]</span></p>
+<p><span class="math display">\[T_K^4 = (T_0 + T_c)^4 = T_0^4 \times (1 + \frac{T_c}{T_0})^4 \approx T_0^4 \times (1+4\frac{T_c}{T_0})\]</span></p>
+<p>The temperature in Kelvin (<span class="math inline">\(T_K\)</span>), the 0<span class="math inline">\(^\circ\)</span>C in Kelvin (<span class="math inline">\(T_0\)</span> = 273.15K) and temperature in Celcius (<span class="math inline">\(T_c\)</span>)</p>
+<p><span class="math display">\[{T_K}^4 = {T_0}^4 + 4{T_0}^3 \times T_c = a + bT_c\]</span></p>
 <p>As <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, we can simplify:</p>
 <span class="math display">\[\begin{equation}
 \tag{6}
-F_g = \epsilon\sigma * {T_K}^4 = \epsilon\sigma(a + bT_c) = A + BT_c
+F_g = \epsilon\sigma \times {T_K}^4 = \epsilon\sigma(a + bT_c) = A + BT_c
 \end{equation}\]</span>
 <p>With A (<span class="math inline">\(W m^{-2}\)</span>) and B (<span class="math inline">\(W m^{-2}\)</span> <span class="math inline">\(^\circ C^{-1}\)</span>) constants. A and B reflect the <strong>emissivity</strong> of the atmosphere. They will be given and they vary with the type of atmosphere (amount of greenhouse gases). More or less, the constants A and B can tell us the following:</p>
 <p><strong>Table 3:</strong> Representation of the constants A and B</p>
@@ -483,11 +528,11 @@ F_g = \epsilon\sigma * {T_K}^4 = \epsilon\sigma(a + bT_c) = A + BT_c
 <section id="temperature-evolution-model-1" class="level3" data-number="2.8.1">
 <h3 data-number="2.8.1" class="anchored" data-anchor-id="temperature-evolution-model-1"><span class="header-section-number">2.8.1</span> TEMPERATURE EVOLUTION MODEL</h3>
 <p>In this model, we are interested to find the change of temperature with time and find the equilibrium temperature of the planet as it reaches radiative equilibrium. We will be modelling Earth’s emission as written in <em>6.2</em> using the values for a greybody. The equations for Earth’s average energy gain (<span class="math inline">\(E_{gain}\)</span>) and energy loss (<span class="math inline">\(E_{loss}\)</span>) for this model would be:</p>
-<p><span class="math display">\[E_{gain}(W/m^2) = \frac{S_0* (1-\alpha)}{4}\]</span> <span class="math display">\[E_{loss} (W/m^2)= A + BT_c\]</span></p>
+<p><span class="math display">\[E_{gain}(W/m^2) = \frac{S_0 \times (1-\alpha)}{4}\]</span> <span class="math display">\[E_{loss} (W/m^2)= A + BT_c\]</span></p>
 <p>The absorption of heat of a body is controlled by the heat capacity (C). So, the difference between the energy gain and the energy loss of the Earth can be expressed:</p>
 <span class="math display">\[\begin{equation}
 \tag{7}
-C * \frac{dT}{dt} = E_{gain} - E_{loss}
+C \times \frac{dT}{dt} = E_{gain} - E_{loss}
 \end{equation}\]</span>
 <p>The rate of heat flow (<span class="math inline">\(\frac{dT}{dt}\)</span>) is proportional to the difference between the energy gained and energy loss by Earth.</p>
 </section>
@@ -497,7 +542,7 @@ C * \frac{dT}{dt} = E_{gain} - E_{loss}
 <p>Let’s construct a code for a temperature evolution model that simulates how Earth’s temperature slowly equilibrates over time.</p>
 <p><strong>M6.</strong> According to the rate of heat flow equation, what is the unit of the heat capacity (C)?</p>
 <p>Calculate Earth’s Heat Capacity (<span class="math inline">\(C\)</span>) based on Earth’s water content. Given:<br>
-<br> Depth of water: <span class="math inline">\(70\)</span> m <br> Density of water: <span class="math inline">\(1.025 * 10^6\)</span> g/m<span class="math inline">\(^3\)</span> <br> Heat capacity of water: <span class="math inline">\(4.186\)</span> J/g<span class="math inline">\(*\)</span>K <br> Ocean coverage: <span class="math inline">\(0.7\)</span></p>
+<br> Depth of water: <span class="math inline">\(70\)</span> m <br> Density of water: <span class="math inline">\(1.025 \times 10^6\)</span> g/m<span class="math inline">\(^3\)</span> <br> Heat capacity of water: <span class="math inline">\(4.186\)</span> J/g<span class="math inline">\(.\)</span>K <br> Ocean coverage: <span class="math inline">\(0.7\)</span></p>
 <hr>
 <p><strong>M7.</strong> Calculate Earth’s average <span class="math inline">\(E_{gain}\)</span> (Energy gain in Watts/m<span class="math inline">\(^2\)</span>). Given:<br>
 <br> <span class="math inline">\(S_0\)</span>: 1370 Watts/m<span class="math inline">\(^2\)</span> <br> Albedo: 0.32</p>
@@ -527,8 +572,8 @@ C * \frac{dT}{dt} = E_{gain} - E_{loss}
 <section id="feedback-loops" class="level3" data-number="2.10.2">
 <h3 data-number="2.10.2" class="anchored" data-anchor-id="feedback-loops"><span class="header-section-number">2.10.2</span> FEEDBACK LOOPS</h3>
 <p>To understand climate tipping points, let’s first try to imagine how Earth’s climate would be like given the following situations:</p>
-<div id="exr-hahah" class="theorem exercise">
-<p><span class="theorem-title"><strong>Question 2.5 </strong></span>What would happen to the Earth if it experiences an extreme increase of solar insolation? Predict the changes using the water vapor feedback mechanism (<strong>Figure 11</strong>). Explain the mechanism of this feedback. Does it happen easily? Why?<br>
+<div>
+<p>What would happen to the Earth if it experiences an extreme increase of solar insolation? Predict the changes using the water vapor feedback mechanism (<strong>Figure 11</strong>). Explain the mechanism of this feedback. Does it happen easily? Why?<br>
 (Think of the relationship between pressure and the boiling point, <strong>Figure 12</strong>)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -543,8 +588,8 @@ C * \frac{dT}{dt} = E_{gain} - E_{loss}
 </figure>
 </div>
 </div>
-<div id="exr-hahah" class="theorem exercise">
-<p><span class="theorem-title"><strong>Question 2.6 </strong></span>What would happen to the Earth if it experiences an extreme decrease in solar insolation? Predict the changes using the Ice-albedo feedback mechanism (<strong>Figure 13</strong>). Explain the mechanism of this feedback.</p>
+<div>
+<p>What would happen to the Earth if it experiences an extreme decrease in solar insolation? Predict the changes using the Ice-albedo feedback mechanism (<strong>Figure 13</strong>). Explain the mechanism of this feedback.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Chapter02Media/Figure13.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -594,15 +639,15 @@ For Deeper Discussion
 </section>
 <section id="model-set-up" class="level3" data-number="2.11.2">
 <h3 data-number="2.11.2" class="anchored" data-anchor-id="model-set-up"><span class="header-section-number">2.11.2</span> MODEL SET-UP</h3>
-<section id="a-energy-gain" class="level4" data-number="2.11.2.1">
-<h4 data-number="2.11.2.1" class="anchored" data-anchor-id="a-energy-gain"><span class="header-section-number">2.11.2.1</span> (A) Energy gain</h4>
+<section id="a-energy-gain" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="a-energy-gain">(A) Energy gain</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Chapter02Media/Figure14.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption class="figure-caption"><strong>Figure 15:</strong> Distribution of the solar flux across latitudes.</figcaption>
 </figure>
 </div>
-<p>We divide the hemisphere in 10 bands of 9<span class="math inline">\(^\circ\)</span> latitude each (<strong>Figure 14</strong>). The area of each band (in fraction) and the local solar flux (<span class="math inline">\(S_i\)</span>) is reported in <strong>Table 5</strong>.</p>
+<p>We divide the hemisphere in 10 bands of 9<span class="math inline">\(^\circ\)</span> latitude each (<strong>Figure 15</strong>). The area of each band (in fraction) and the local solar flux (<span class="math inline">\(S_i\)</span>) is reported in <strong>Table 5</strong>.</p>
 <p><strong>Table 5:</strong> Area and local solar flux received for each latitude bands.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -612,23 +657,23 @@ For Deeper Discussion
 <p>Use the zonal insolation data (<span class="math inline">\(S_i\)</span>) to calculate <span class="math inline">\(F_{gain}\)</span> at each latitude band.</p>
 <span class="math display">\[\begin{equation}
 \tag{8}
-F_{gain} = S_i * (1-\alpha_i) * M
+F_{gain} = S_i \times (1-\alpha_i) \times M
 \end{equation}\]</span>
 </section>
-<section id="b-temperature" class="level4" data-number="2.11.2.2">
-<h4 data-number="2.11.2.2" class="anchored" data-anchor-id="b-temperature"><span class="header-section-number">2.11.2.2</span> (B) Temperature</h4>
+<section id="b-temperature" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="b-temperature">(B) Temperature</h4>
 <p>Let’s define the average planet temperature as:</p>
 <span class="math display">\[\begin{equation}
 \tag{9}
-T_{avg} = \sum(area_i * T_i)
+T_{avg} = \sum(area_i \times T_i)
 \end{equation}\]</span>
 </section>
-<section id="c-energy-loss-from-earth" class="level4" data-number="2.11.2.3">
-<h4 data-number="2.11.2.3" class="anchored" data-anchor-id="c-energy-loss-from-earth"><span class="header-section-number">2.11.2.3</span> (C) Energy loss from Earth</h4>
+<section id="c-energy-loss-from-earth" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="c-energy-loss-from-earth">(C) Energy loss from Earth</h4>
 <p>The energy emitted/lost at each latitude band is given by the local temperature (<span class="math inline">\(T_i\)</span>) and the average temperature (<span class="math inline">\(T_{avg}\)</span>):</p>
 <span class="math display">\[\begin{equation}
 \tag{10}
-F_{loss} = A + B * T_i + G * (T_i - T_{avg})
+F_{loss} = A + B \times T_i + G \times (T_i - T_{avg})
 \end{equation}\]</span>
 <p><span class="math inline">\(G\)</span> represents heat transfer coefficient. <span class="math inline">\(F_{loss}\)</span> at each latitude band is then calculated.</p>
 </section>
@@ -638,25 +683,25 @@ F_{loss} = A + B * T_i + G * (T_i - T_{avg})
 <p>Let’s now find the local albedo (<span class="math inline">\(\alpha_i\)</span>). At each latitude band, the albedo is fixed at 0.3 (current Earth’s albedo) when the temperature is <span class="math inline">\(\ge -10^\circ\)</span>C (critical T), otherwise it is 0.6 (ice albedo). The same way as the temperature, the average albedo of the planet is the sum of the area-weighted albedos.</p>
 <span class="math display">\[\begin{equation}
 \tag{11}
-\alpha_{average} = \sum(area_i * \alpha_i)
+\alpha_{average} = \sum(area_i \times \alpha_i)
 \end{equation}\]</span>
 </section>
 <section id="equilibrium-states" class="level3" data-number="2.11.4">
 <h3 data-number="2.11.4" class="anchored" data-anchor-id="equilibrium-states"><span class="header-section-number">2.11.4</span> EQUILIBRIUM STATES</h3>
 <p>Our objective is to find the equilibrium average temperature of the planet for a specific solar luminosity (<span class="math inline">\(T_{eq}\)</span> against <span class="math inline">\(M\)</span>). In other words, how does the planet’s temperature change when the overall solar energy received changes.</p>
 <p>You’ll need to find the average temperature (T) at equilibrium for the values of the solar multiplier (<span class="math inline">\(M\)</span>) going from 0.6 to 1.4. First, run the model by increasing <span class="math inline">\(M\)</span> (0.6 to 1.4) and then by decreasing <span class="math inline">\(M\)</span> (1.4 to 0.6). Collect the equilibrium temperature for each solar multiplier.</p>
-<p><span class="math display">\[F_{loss} = A + B * T_i + G * (T_i - T_{avg})\]</span> <span class="math display">\[F_{gain} = S_i * (1-\alpha_i) * M\]</span></p>
+<p><span class="math display">\[F_{loss} = A + B \times T_i + G \times (T_i - T_{avg})\]</span> <span class="math display">\[F_{gain} = S_i \times (1-\alpha_i) \times  M\]</span></p>
 <p>At equilibrium, <span class="math inline">\(F_{gain} = F_{loss}\)</span></p>
-<p><span class="math display">\[F_{gain} = F_{loss} = A + B * T_i + G * (T_i - T_{avg})\]</span></p>
+<p><span class="math display">\[F_{gain} = F_{loss} = A + B \times T_i + G \times (T_i - T_{avg})\]</span></p>
 <span class="math display">\[\begin{equation}
 \tag{12}
-T_i = \frac{F_{gain} - A + G * T_{avg}}{(B+G)}
+T_i = \frac{F_{gain} - A + G \times T_{avg}}{(B+G)}
 \end{equation}\]</span>
 <p>To find the equilibrium average planet temperature (<span class="math inline">\(T_{avg}\)</span>), you will start with an arbitrary condition (i.e.&nbsp;local temperature for each latitude band) and use the iteration method.</p>
 </section>
 <section id="initial-conditions" class="level3" data-number="2.11.5">
 <h3 data-number="2.11.5" class="anchored" data-anchor-id="initial-conditions"><span class="header-section-number">2.11.5</span> INITIAL CONDITIONS</h3>
-<p>The solar constant is <span class="math inline">\(S_0 * M\)</span> with <span class="math inline">\(M\)</span> ranging from 0.6 to 1.4.</p>
+<p>The solar constant is <span class="math inline">\(S_0 \times M\)</span> with <span class="math inline">\(M\)</span> ranging from 0.6 to 1.4.</p>
 <p>You will assume that it is the same initial temperature (<span class="math inline">\(T_i\)</span> = 203K) at each latitude band (with <span class="math inline">\(M\)</span> = 0.6). Therefore, all local albedos at the initial stage is equivalent to 0.6 (Earth is covered in ice).</p>
 <p>In this model, you are tasked to model Earth’s temperature by changing <span class="math inline">\(M\)</span> to simulate when solar radiation received increases (0.6 to 1.4) or decreases (1.4 to 0.6). Do note that following incremental changes in <span class="math inline">\(M\)</span>, the calculated equilibrium temperature from the previous iteration will then become the initial temperature for the next iteration.</p>
 </section>
@@ -665,22 +710,30 @@ T_i = \frac{F_{gain} - A + G * T_{avg}}{(B+G)}
 <h2 data-number="2.12" class="anchored" data-anchor-id="modelling-questions-4"><span class="header-section-number">2.12</span> Modelling Questions</h2>
 <p>Let’s construct a code to understand the ice-albedo model.</p>
 <p>You are given two arrays containing the area of each band and its local solar flux:</p>
-<pre><code># Array containing area of each band and its local solar flux
-Area = np.array([0.156434465, 0.152582529, 0.144973505, 0.133794753, 0.119321529, 0.101910213, 0.08198953, 0.060049992, 0.036631824, 0.012311659])
-S    = np.array([416.6480383, 406.3887808, 386.1228828, 356.349358, 317.8013293, 271.4279772, 218.3711674, 160.4091221, 112.7543514, 73.14499959])
-
-# Constants:
-G, A, B = 3.8, 204, 2.17</code></pre>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Array containing area of each band and its local solar flux</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Area <span class="op">=</span> np.array([<span class="fl">0.156434465</span>, <span class="fl">0.152582529</span>, <span class="fl">0.144973505</span>, <span class="fl">0.133794753</span>, <span class="fl">0.119321529</span>, <span class="fl">0.101910213</span>, <span class="fl">0.08198953</span>, <span class="fl">0.060049992</span>, <span class="fl">0.036631824</span>, <span class="fl">0.012311659</span>])</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>S    <span class="op">=</span> np.array([<span class="fl">416.6480383</span>, <span class="fl">406.3887808</span>, <span class="fl">386.1228828</span>, <span class="fl">356.349358</span>, <span class="fl">317.8013293</span>, <span class="fl">271.4279772</span>, <span class="fl">218.3711674</span>, <span class="fl">160.4091221</span>, <span class="fl">112.7543514</span>, <span class="fl">73.14499959</span>])</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Constants:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>G, A, B <span class="op">=</span> <span class="fl">3.8</span>, <span class="dv">204</span>, <span class="fl">2.17</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <p><strong>M9.</strong> Initialize two arrays to store the modelled Earth’s bands of temperatures (<em>T_0</em>) and albedos(<em>albedo_0</em>). <em>Have the planet first be -70</em><span class="math inline">\(^\circ\)</span>C throughout.</p>
-<p><strong>Remember:</strong> The critical temperature is <span class="math inline">\(-10^\circ\)</span>C, albedo is 0.3 <span class="math inline">\(\ge -10^\circ\)</span>C and albedo is 0.6 <span class="math inline">\(\le -10^\circ\)</span>C.</p>
+<p><strong>Remember:</strong> The critical temperature is <span class="math inline">\(-10^\circ\)</span>C. The albedo is 0.3 when <span class="math inline">\(T\ge -10^\circ\)</span>C and albedo is 0.6 when <span class="math inline">\(T\le -10^\circ\)</span>C.</p>
 <hr>
-<p><strong>M10.</strong> Understand and complete the flowchart of the ice-albedo model given below. <img src="Chapter02Media/FlowChart2.png" class="img-fluid" style="width:100.0%" data-fig-align="center"> — <strong>M11.</strong> Based on the flowchart, construct the code to compute the ice-albedo model and plot the graphs for increasing and decreasing solar multiplier (<span class="math inline">\(M\)</span>).</p>
+<p><strong>M10.</strong> Understand and complete the flowchart of the ice-albedo model given below. <img src="Chapter02Media/FlowChart2.png" class="img-fluid" style="width:100.0%" data-fig-align="center"></p>
+<p><strong>M11.</strong> Based on the flowchart, construct the code to compute the ice-albedo model and plot the graphs for increasing and decreasing solar multiplier (<span class="math inline">\(M\)</span>).</p>
 <section id="interpreting-the-graphical-results" class="level3" data-number="2.12.1">
 <h3 data-number="2.12.1" class="anchored" data-anchor-id="interpreting-the-graphical-results"><span class="header-section-number">2.12.1</span> Interpreting the graphical results</h3>
 <p>The ice-albedo model aims to relate the concept of feedback cycles and how they affect the surface temperature of the Earth to achieve equilibrium. Using previous questions, attempt to draw the feedback cycles when surface temperatures drops or when it rises. You’ll find that both feedback cycles show a positive feedback loop which magnifies the effects of the change in solar luminosity.</p>
 <p>The ice-albedo model show how changes of the Earth’s polar ice caps can have huge effects on the entire planet’s climate. For more information, look into the supplementary materials on Earth’s paleoclimate.</p>
-<div id="exr-hahah" class="theorem exercise">
-<p><span class="theorem-title"><strong>Question 2.7 </strong></span>Illustrate two positive feedback loops when <strong>1.</strong> surface temperatures drops and <strong>2.</strong> when surface temperature rises incorporating the below factors:</p>
+<div>
+<p>Illustrate two positive feedback loops when <strong>1.</strong> surface temperatures drops and <strong>2.</strong> when surface temperature rises incorporating the below factors:</p>
 <ul>
 <li>Surface temperature</li>
 <li>Ice Cover</li>
@@ -706,12 +759,7 @@ For Deeper Discussion
 </section>
 <section id="deliverables" class="level2" data-number="2.13">
 <h2 data-number="2.13" class="anchored" data-anchor-id="deliverables"><span class="header-section-number">2.13</span> DELIVERABLES</h2>
-<p>From this chapter you will have to submit:</p>
-<ol type="1">
-<li>Earth journal entry</li>
-<li>Group presentation</li>
-</ol>
-<p>The instructions are shared in separate documents.</p>
+<p>See module assessment and assignment instructions.</p>
 </section>
 <section id="references" class="level2" data-number="2.14">
 <h2 data-number="2.14" class="anchored" data-anchor-id="references"><span class="header-section-number">2.14</span> REFERENCES</h2>
