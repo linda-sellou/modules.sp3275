@@ -216,13 +216,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#local-and-average-albedo" id="toc-local-and-average-albedo" class="nav-link" data-scroll-target="#local-and-average-albedo"><span class="header-section-number">2.7.3</span> LOCAL AND AVERAGE ALBEDO</a></li>
   <li><a href="#equilibrium-states" id="toc-equilibrium-states" class="nav-link" data-scroll-target="#equilibrium-states"><span class="header-section-number">2.7.4</span> EQUILIBRIUM STATES</a></li>
   <li><a href="#initial-conditions" id="toc-initial-conditions" class="nav-link" data-scroll-target="#initial-conditions"><span class="header-section-number">2.7.5</span> INITIAL CONDITIONS</a></li>
+  <li><a href="#modelling-questions-4" id="toc-modelling-questions-4" class="nav-link" data-scroll-target="#modelling-questions-4"><span class="header-section-number">2.7.6</span> Modelling Questions</a></li>
+  <li><a href="#interpreting-the-graphical-results" id="toc-interpreting-the-graphical-results" class="nav-link" data-scroll-target="#interpreting-the-graphical-results"><span class="header-section-number">2.7.7</span> Interpreting the graphical results</a></li>
   </ul></li>
-  <li><a href="#modelling-questions-4" id="toc-modelling-questions-4" class="nav-link" data-scroll-target="#modelling-questions-4"><span class="header-section-number">2.8</span> Modelling Questions</a>
-  <ul class="collapse">
-  <li><a href="#interpreting-the-graphical-results" id="toc-interpreting-the-graphical-results" class="nav-link" data-scroll-target="#interpreting-the-graphical-results"><span class="header-section-number">2.8.1</span> Interpreting the graphical results</a></li>
-  </ul></li>
-  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables"><span class="header-section-number">2.9</span> DELIVERABLES</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">2.10</span> REFERENCES</a></li>
+  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables"><span class="header-section-number">2.8</span> DELIVERABLES</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">2.9</span> REFERENCES</a></li>
   </ul>
 </nav>
     </div>
@@ -703,9 +701,8 @@ T_i = \frac{F_{gain} - A + G \times T_{avg}}{(B+G)}
 <p>You will assume that it is the same initial temperature (<span class="math inline">\(T_i\)</span> = 203K) at each latitude band (with <span class="math inline">\(M\)</span> = 0.6). Therefore, all local albedos at the initial stage is equivalent to 0.6 (Earth is covered in ice).</p>
 <p>In this model, you are tasked to model Earth’s temperature by changing <span class="math inline">\(M\)</span> to simulate when solar radiation received increases (0.6 to 1.4) or decreases (1.4 to 0.6). Do note that following incremental changes in <span class="math inline">\(M\)</span>, the calculated equilibrium temperature from the previous iteration will then become the initial temperature for the next iteration.</p>
 </section>
-</section>
-<section id="modelling-questions-4" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="modelling-questions-4"><span class="header-section-number">2.8</span> Modelling Questions</h2>
+<section id="modelling-questions-4" class="level3" data-number="2.7.6">
+<h3 data-number="2.7.6" class="anchored" data-anchor-id="modelling-questions-4"><span class="header-section-number">2.7.6</span> Modelling Questions</h3>
 <p>Let’s construct a code to understand the ice-albedo model.</p>
 <p>You are given two arrays containing the area of each band and its local solar flux:</p>
 <div class="cell" data-execution_count="1">
@@ -726,8 +723,9 @@ T_i = \frac{F_{gain} - A + G \times T_{avg}}{(B+G)}
 <hr>
 <p><strong>M10.</strong> Understand and complete the flowchart of the ice-albedo model given below. <img src="Chapter02Media/FlowChart2.png" class="img-fluid" style="width:100.0%" data-fig-align="center"></p>
 <p><strong>M11.</strong> Based on the flowchart, construct the code to compute the ice-albedo model and plot the graphs for increasing and decreasing solar multiplier (<span class="math inline">\(M\)</span>).</p>
-<section id="interpreting-the-graphical-results" class="level3" data-number="2.8.1">
-<h3 data-number="2.8.1" class="anchored" data-anchor-id="interpreting-the-graphical-results"><span class="header-section-number">2.8.1</span> Interpreting the graphical results</h3>
+</section>
+<section id="interpreting-the-graphical-results" class="level3" data-number="2.7.7">
+<h3 data-number="2.7.7" class="anchored" data-anchor-id="interpreting-the-graphical-results"><span class="header-section-number">2.7.7</span> Interpreting the graphical results</h3>
 <p>The ice-albedo model aims to relate the concept of feedback cycles and how they affect the surface temperature of the Earth to achieve equilibrium. Using previous questions, attempt to draw the feedback cycles when surface temperatures drops or when it rises. You’ll find that both feedback cycles show a positive feedback loop which magnifies the effects of the change in solar luminosity.</p>
 <p>The ice-albedo model show how changes of the Earth’s polar ice caps can have huge effects on the entire planet’s climate. For more information, look into the supplementary materials on Earth’s paleoclimate.</p>
 <div>
@@ -755,12 +753,12 @@ For Deeper Discussion
 </div>
 </section>
 </section>
-<section id="deliverables" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="deliverables"><span class="header-section-number">2.9</span> DELIVERABLES</h2>
+<section id="deliverables" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="deliverables"><span class="header-section-number">2.8</span> DELIVERABLES</h2>
 <p>See module assessment and assignment instructions.</p>
 </section>
-<section id="references" class="level2" data-number="2.10">
-<h2 data-number="2.10" class="anchored" data-anchor-id="references"><span class="header-section-number">2.10</span> REFERENCES</h2>
+<section id="references" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="references"><span class="header-section-number">2.9</span> REFERENCES</h2>
 <p>Budyko, M. I. (1969). The effect of solar radiation variations on the climate of the Earth. <em>Tellus</em>, 21(5), 611-619.</p>
 <p>Cess, R. D. (1976). Climate change: an appraisal of atmospheric feedback mechanisms employing zonal climatology. <em>Journal of atmospheric sciences</em>, 33(10), 1831-1843.</p>
 <p>Lenton, T. M., Rockström, J., Gaffney, O. et al.&nbsp;(2019). Climate tipping points – too risky to bet against. <em>Nature</em> 575, 592-595. https://doi.org/10.1038/d41586-019-03595-0.</p>
